@@ -28,6 +28,14 @@
   --gold-deep:#6b4e00;
   --text:#f5f1e6;
   --muted:#a39682;
+
+  /* Light tokens (seções claras) */
+  --light-bg:#faf8f3;
+  --light-surface:#ffffff;
+  --light-border:#e8e3d5;
+  --light-text:#120e07;
+  --light-text-soft:#4a4132;
+  --light-muted:#7a7260;
   --radius:14px;
   --radius-lg:22px;
   --shadow-lg: 0 30px 80px -20px rgba(0,0,0,.6), 0 10px 30px -10px rgba(0,0,0,.4);
@@ -565,6 +573,66 @@ h4{font-size: 18px; font-weight:700}
   transition: background-color .2s ease;
 }
 .floating-cta:hover{background: var(--gold-bright)}
+
+/* ========== SEÇÕES CLARAS ========== */
+.section-light{
+  background: var(--light-bg);
+  color: var(--light-text);
+  border-top: 1px solid var(--light-border);
+  border-bottom: 1px solid var(--light-border);
+}
+.section-light h1,
+.section-light h2,
+.section-light h3,
+.section-light h4{
+  color: var(--light-text);
+}
+.section-light .section-sub{color: var(--light-muted)}
+.section-light .section-tag{color: var(--gold); border-left-color: var(--gold)}
+.section-light .grad-green,
+.section-light .grad-gold{color: var(--gold)}
+
+/* Bonus em light */
+.section-light .bonus-card{
+  background: var(--light-surface);
+  border:1px solid var(--light-border);
+}
+.section-light .bonus-card-highlight{
+  border-left: 3px solid var(--gold);
+}
+.section-light .bonus-icon{
+  background: #fff7dd;
+  border:1px solid #f2dc8a;
+}
+.section-light .bonus-icon svg{stroke: var(--gold-dark)}
+.section-light .bonus-value{color: var(--light-text)}
+.section-light .bonus-value strong{color: var(--light-text)}
+.section-light .bonus-desc{color: var(--light-text-soft)}
+.section-light .bonus-desc strong{color: var(--light-text)}
+.section-light .badge-hot{background: var(--gold); color: var(--light-text)}
+
+/* About em light */
+.section-light .about-copy p{color: var(--light-text-soft)}
+.section-light .about-copy p strong{color: var(--light-text)}
+.section-light .about-photo{
+  background: var(--light-surface);
+  border:1px solid var(--light-border);
+}
+
+/* FAQ em light */
+.section-light .faq-list details,
+.section-light details{
+  background: var(--light-surface);
+  border:1px solid var(--light-border);
+}
+.section-light details summary{color: var(--light-text)}
+.section-light details summary::after{color: var(--gold)}
+.section-light details[open]{
+  border-color: var(--light-border);
+  border-left: 3px solid var(--gold);
+}
+.section-light details p{color: var(--light-text-soft)}
+.section-light details p strong{color: var(--light-text)}
 
 /* ========== RESPONSIVE ========== */
 @media (max-width: 960px){
