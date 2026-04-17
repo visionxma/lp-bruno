@@ -59,7 +59,20 @@ document.getElementById('year').textContent = new Date().getFullYear();
   setInterval(tick, 1000);
 })();
 
-// 3) Reveal on scroll (suave)
+// 3) Floating CTA — só aparece depois que a hero sair da viewport
+(function floatingCtaVisibility() {
+  const cta = document.querySelector('.floating-cta');
+  const hero = document.querySelector('.hero');
+  if (!cta || !hero || !('IntersectionObserver' in window)) return;
+
+  const io = new IntersectionObserver(([entry]) => {
+    cta.classList.toggle('visible', !entry.isIntersecting);
+  }, { threshold: 0 });
+
+  io.observe(hero);
+})();
+
+// 4) Reveal on scroll (suave)
 (function revealOnScroll() {
   const items = document.querySelectorAll('.about-photo, .about-copy, .final-card');
   if (!('IntersectionObserver' in window)) return;

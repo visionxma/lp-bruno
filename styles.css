@@ -54,12 +54,12 @@
    ========================================================= */
 
 :root{
-  --bg:#0a0805;
-  --bg-2:#120e07;
-  --surface:#1a1509;
-  --surface-2:#221b0c;
-  --border:#2d2411;
-  --border-soft:#3e3217;
+  --bg:#000000;
+  --bg-2:#000000;
+  --surface:#121010;
+  --surface-2:#1a1612;
+  --border:#26201a;
+  --border-soft:#3a2f24;
   --gold:#f5b700;
   --gold-bright:#ffcf3d;
   --gold-soft:#ffd95a;
@@ -148,7 +148,7 @@ h4{font-size: 18px; font-weight:700}
 
 /* ========== TOP BAR ========== */
 .topbar{
-  background: #120e07;
+  background: #000;
   color:var(--gold);
   font-size:12px;
   font-weight:600;
@@ -611,7 +611,6 @@ h4{font-size: 18px; font-weight:700}
   position:fixed;
   bottom: 20px;
   left: 50%;
-  transform: translateX(-50%);
   display:inline-flex; align-items:center; gap:10px;
   background: var(--gold);
   color:#120e07;
@@ -620,7 +619,15 @@ h4{font-size: 18px; font-weight:700}
   border-radius: 4px;
   border: 1px solid rgba(0,0,0,.2);
   z-index: 999;
-  transition: background-color .2s ease;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(-50%) translateY(18px);
+  transition: opacity .3s ease, transform .3s ease, background-color .2s ease;
+}
+.floating-cta.visible{
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateX(-50%) translateY(0);
 }
 .floating-cta:hover{background: var(--gold-bright)}
 
