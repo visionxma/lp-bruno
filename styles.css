@@ -1,4 +1,43 @@
 /* =========================================================
+   Fontes locais — Meutas (família geométrica corporativa)
+   ========================================================= */
+@font-face{
+  font-family:'Meutas';
+  src:url('fonts/Meutas-Regular.otf') format('opentype');
+  font-weight:400; font-style:normal; font-display:swap;
+}
+@font-face{
+  font-family:'Meutas';
+  src:url('fonts/Meutas-Medium.otf') format('opentype');
+  font-weight:500; font-style:normal; font-display:swap;
+}
+@font-face{
+  font-family:'Meutas';
+  src:url('fonts/Meutas-SemiBold.otf') format('opentype');
+  font-weight:600; font-style:normal; font-display:swap;
+}
+@font-face{
+  font-family:'Meutas';
+  src:url('fonts/Meutas-Bold.otf') format('opentype');
+  font-weight:700; font-style:normal; font-display:swap;
+}
+@font-face{
+  font-family:'Meutas';
+  src:url('fonts/Meutas-ExtraBold.otf') format('opentype');
+  font-weight:800; font-style:normal; font-display:swap;
+}
+@font-face{
+  font-family:'Meutas';
+  src:url('fonts/Meutas-Black.otf') format('opentype');
+  font-weight:900; font-style:normal; font-display:swap;
+}
+@font-face{
+  font-family:'Meutas';
+  src:url('fonts/Meutas-BoldOblique.otf') format('opentype');
+  font-weight:700; font-style:italic; font-display:swap;
+}
+
+/* =========================================================
    ROTA MILIONÁRIA — Landing Page
    Tema: dark premium / gold
    Paleta:
@@ -71,14 +110,19 @@ a{color:inherit;text-decoration:none}
 }
 
 /* ========== TYPOGRAPHY ========== */
-h1,h2,h3,h4{font-family:'Space Grotesk','Inter',sans-serif;letter-spacing:-.02em;line-height:1.05;margin:0}
-h2{font-size: clamp(28px, 4vw, 46px); font-weight:700}
-h3{font-size: 20px; font-weight:700}
+h1,h2,h3,h4{font-family:'Meutas','Inter',sans-serif;letter-spacing:-.015em;line-height:1.08;margin:0}
+h2{font-size: clamp(28px, 4vw, 46px); font-weight:800; letter-spacing:-.02em}
+h3{font-size: 19px; font-weight:700; letter-spacing:.005em}
 h4{font-size: 18px; font-weight:700}
 
+/* Acento editorial — serif italic nas palavras em destaque dos títulos */
 .grad-green,
 .grad-gold{
   color: var(--gold);
+  font-family: 'Instrument Serif', Georgia, serif;
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: 0;
 }
 
 .section-tag{
@@ -179,16 +223,22 @@ h4{font-size: 18px; font-weight:700}
 }
 
 .title{
-  font-family:'Space Grotesk',sans-serif;
+  font-family:'Meutas',sans-serif;
   font-size: clamp(52px, 7.8vw, 104px);
-  font-weight:800;
-  line-height:.9;
+  font-weight:900;
+  line-height:.92;
   letter-spacing:-.035em;
+  text-transform:uppercase;
   margin: 0 0 20px;
 }
 .title-accent{
   display:inline-block;
   color: var(--gold);
+  font-family: 'Instrument Serif', Georgia, serif;
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: -.01em;
+  text-transform: none;
 }
 
 .lede{
@@ -255,7 +305,7 @@ h4{font-size: 18px; font-weight:700}
   text-align:center;
 }
 .cd-box span{
-  display:block; font-family:'Space Grotesk',sans-serif;
+  display:block; font-family:'Meutas',sans-serif;
   font-size: clamp(26px, 3vw, 34px); font-weight:800; line-height:1;
   color:#fff;
 }
@@ -306,7 +356,7 @@ h4{font-size: 18px; font-weight:700}
   text-align:center;
 }
 .stat strong{
-  display:block; font-family:'Space Grotesk',sans-serif;
+  display:block; font-family:'Meutas',sans-serif;
   font-size: 24px; color:#fff; line-height:1;
 }
 .stat small{display:block;margin-top:6px;color:var(--muted);font-size:12px}
@@ -350,7 +400,7 @@ h4{font-size: 18px; font-weight:700}
 }
 .marquee-item{
   display:inline-flex; align-items:center; gap:10px;
-  font-family:'Space Grotesk',sans-serif;
+  font-family:'Meutas',sans-serif;
   font-size: 15px; font-weight: 800;
   letter-spacing: .1em;
 }
@@ -452,7 +502,7 @@ h4{font-size: 18px; font-weight:700}
 .agenda-item:nth-child(4){ top: 150px; }
 
 .agenda-item .num{
-  font-family:'Space Grotesk',sans-serif;
+  font-family:'Meutas',sans-serif;
   font-size: 34px; font-weight:700; line-height:1;
   color: var(--gold);
   flex:0 0 auto;
