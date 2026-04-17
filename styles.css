@@ -538,9 +538,7 @@ h4{font-size: 18px; font-weight:700}
   padding: 32px 28px;
   transition: border-color .25s ease;
 }
-.bonus-card:nth-child(1){ top: 90px; }
-.bonus-card:nth-child(2){ top: 110px; }
-.bonus-card:nth-child(3){ top: 130px; }
+.bonus-card{ top: 100px; }
 
 .bonus-card-highlight{
   border-left: 3px solid var(--gold);
@@ -595,11 +593,7 @@ h4{font-size: 18px; font-weight:700}
   border-radius: 6px;
   transition: border-color .2s ease;
 }
-/* cada card gruda um pouquinho mais baixo — cria o "leque" ao scrollar */
-.agenda-item:nth-child(1){ top: 90px; }
-.agenda-item:nth-child(2){ top: 110px; }
-.agenda-item:nth-child(3){ top: 130px; }
-.agenda-item:nth-child(4){ top: 150px; }
+.agenda-item{ top: 100px; }
 
 .agenda-item .num{
   font-family:'Meutas',sans-serif;
@@ -671,10 +665,7 @@ h4{font-size: 18px; font-weight:700}
   padding: 22px 26px;
   transition: border-color .2s ease;
 }
-.faq details:nth-child(1){ top: 90px; }
-.faq details:nth-child(2){ top: 110px; }
-.faq details:nth-child(3){ top: 130px; }
-.faq details:nth-child(4){ top: 150px; }
+.faq details{ top: 100px; }
 .faq details[open]{border-left-color: var(--gold); border-left-width: 3px}
 .faq summary{
   font-weight:600; cursor:pointer; list-style:none;
@@ -799,21 +790,13 @@ h4{font-size: 18px; font-weight:700}
   .hero-visual{max-width: 420px; margin: 0 auto}
   .bonus{padding:70px 0 100px}
   .bonus-grid{gap:20px}
-  .bonus-card:nth-child(1){ top: 70px; }
-  .bonus-card:nth-child(2){ top: 86px; }
-  .bonus-card:nth-child(3){ top: 102px; }
+  .bonus-card{ top: 80px; }
   .faq{padding:60px 0 100px}
   .faq-list{gap:16px}
-  .faq details:nth-child(1){ top: 70px; }
-  .faq details:nth-child(2){ top: 86px; }
-  .faq details:nth-child(3){ top: 102px; }
-  .faq details:nth-child(4){ top: 118px; }
+  .faq details{ top: 80px; }
   .agenda{padding:60px 0 100px}
   .agenda-list{gap:20px}
-  .agenda-item:nth-child(1){ top: 70px; }
-  .agenda-item:nth-child(2){ top: 86px; }
-  .agenda-item:nth-child(3){ top: 102px; }
-  .agenda-item:nth-child(4){ top: 118px; }
+  .agenda-item{ top: 80px; }
   .about{padding:60px 0}
   .about-grid{grid-template-columns: 1fr; gap:36px}
   .about-photo{max-width: 420px; margin: 0 auto}
