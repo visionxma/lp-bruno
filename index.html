@@ -43,6 +43,61 @@
 
   <!-- HERO -->
   <header class="hero">
+    <!-- Decoração de fundo: gráfico + notificações -->
+    <div class="hero-decor" aria-hidden="true">
+      <svg class="hero-chart" viewBox="0 0 1200 400" preserveAspectRatio="none">
+        <defs>
+          <linearGradient id="chartStroke" x1="0" x2="1" y1="0" y2="0">
+            <stop offset="0%"   stop-color="rgba(245,183,0,0)"/>
+            <stop offset="35%"  stop-color="rgba(245,183,0,.75)"/>
+            <stop offset="100%" stop-color="rgba(245,183,0,0)"/>
+          </linearGradient>
+          <linearGradient id="chartFill" x1="0" x2="0" y1="0" y2="1">
+            <stop offset="0%"   stop-color="rgba(245,183,0,.18)"/>
+            <stop offset="100%" stop-color="rgba(245,183,0,0)"/>
+          </linearGradient>
+        </defs>
+        <path class="hero-chart-area"
+          d="M 0 320 L 80 300 L 160 330 L 240 280 L 320 305 L 400 255 L 480 235 L 560 270 L 640 210 L 720 230 L 800 180 L 880 200 L 960 150 L 1040 165 L 1120 110 L 1200 90 L 1200 400 L 0 400 Z"
+          fill="url(#chartFill)"/>
+        <path class="hero-chart-line"
+          d="M 0 320 L 80 300 L 160 330 L 240 280 L 320 305 L 400 255 L 480 235 L 560 270 L 640 210 L 720 230 L 800 180 L 880 200 L 960 150 L 1040 165 L 1120 110 L 1200 90"
+          stroke="url(#chartStroke)" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+
+      <div class="ticker-notif notif-1">
+        <span class="ticker-arrow up" aria-hidden="true">
+          <svg viewBox="0 0 12 12" width="10" height="10"><polyline points="2 7 6 3 10 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        <span class="ticker-symbol">PETR4</span>
+        <span class="ticker-change up">+4,32%</span>
+      </div>
+
+      <div class="ticker-notif notif-2">
+        <span class="ticker-arrow up" aria-hidden="true">
+          <svg viewBox="0 0 12 12" width="10" height="10"><polyline points="2 7 6 3 10 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        <span class="ticker-symbol">BTC/USD</span>
+        <span class="ticker-change up">+1,87%</span>
+      </div>
+
+      <div class="ticker-notif notif-3">
+        <span class="ticker-arrow down" aria-hidden="true">
+          <svg viewBox="0 0 12 12" width="10" height="10"><polyline points="2 5 6 9 10 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        <span class="ticker-symbol">VALE3</span>
+        <span class="ticker-change down">−0,54%</span>
+      </div>
+
+      <div class="ticker-notif notif-4">
+        <span class="ticker-arrow up" aria-hidden="true">
+          <svg viewBox="0 0 12 12" width="10" height="10"><polyline points="2 7 6 3 10 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        <span class="ticker-symbol">ITUB4</span>
+        <span class="ticker-change up">+2,15%</span>
+      </div>
+    </div>
+
     <div class="container hero-inner">
       <div class="hero-copy">
         <span class="eyebrow">

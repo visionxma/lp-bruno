@@ -206,6 +206,106 @@ h4{font-size: 18px; font-weight:700}
   border-bottom: 1px solid var(--border);
 }
 
+/* ========== HERO DECOR (gráfico + notificações) ========== */
+.hero-decor{
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  z-index:0;
+}
+.hero-inner{ position:relative; z-index:1 }
+
+.hero-chart{
+  position:absolute;
+  left:0; right:0; bottom:0;
+  width:100%; height:62%;
+  opacity:.55;
+}
+.hero-chart-line{
+  stroke-dasharray: 3000;
+  stroke-dashoffset: 3000;
+  animation: chartDraw 9s ease-in-out infinite;
+}
+.hero-chart-area{
+  opacity: 0;
+  animation: chartFade 9s ease-in-out infinite;
+}
+@keyframes chartDraw{
+  0%   { stroke-dashoffset: 3000; }
+  55%  { stroke-dashoffset: 0; }
+  80%  { stroke-dashoffset: 0; opacity:1 }
+  100% { stroke-dashoffset: 0; opacity:0 }
+}
+@keyframes chartFade{
+  0%, 30% { opacity: 0; }
+  60%     { opacity: .9; }
+  80%     { opacity: .9; }
+  100%    { opacity: 0; }
+}
+
+/* Notificações de cotações */
+.ticker-notif{
+  position:absolute;
+  display:inline-flex; align-items:center; gap:10px;
+  padding: 10px 14px;
+  background: rgba(18,16,16,.75);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 12.5px;
+  color: var(--text);
+  font-family:'Meutas',sans-serif;
+  opacity: 0;
+  will-change: transform, opacity;
+}
+.ticker-symbol{
+  font-weight: 700;
+  letter-spacing: .04em;
+  color:#fff;
+}
+.ticker-change{
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+.ticker-change.up,
+.ticker-arrow.up{ color:#22c55e }
+.ticker-change.down,
+.ticker-arrow.down{ color:#ef4444 }
+.ticker-arrow{
+  display:inline-flex; align-items:center; justify-content:center;
+  width:18px; height:18px;
+  border-radius: 50%;
+  background: rgba(34,197,94,.15);
+}
+.ticker-arrow.down{ background: rgba(239,68,68,.15) }
+
+/* Posicionamento e delays — ciclo suave */
+.notif-1{ top: 12%;  left: 40%;  animation: notifFloat 11s ease-in-out infinite;           animation-delay: 0.5s; }
+.notif-2{ top: 28%;  right: 5%;  animation: notifFloat 11s ease-in-out infinite;           animation-delay: 3s; }
+.notif-3{ bottom: 18%; left: 3%; animation: notifFloat 11s ease-in-out infinite;           animation-delay: 5.5s; }
+.notif-4{ bottom: 28%; right: 30%; animation: notifFloat 11s ease-in-out infinite;         animation-delay: 8s; }
+
+@keyframes notifFloat{
+  0%              { opacity: 0; transform: translateY(12px); }
+  6%              { opacity: 1; transform: translateY(0); }
+  30%             { opacity: 1; transform: translateY(-2px); }
+  38%             { opacity: 0; transform: translateY(-10px); }
+  100%            { opacity: 0; transform: translateY(-10px); }
+}
+
+@media (max-width: 960px){
+  .hero-chart{ opacity:.35; height:55% }
+  .notif-1, .notif-4{ display:none }
+  .notif-2{ top: 10%; right: 4% }
+  .notif-3{ bottom: 8%; left: 4% }
+  .ticker-notif{ font-size: 11.5px; padding: 8px 12px }
+}
+@media (max-width: 540px){
+  .notif-2, .notif-3{ display:none }
+  .hero-chart{ opacity:.25 }
+}
+
 .hero-inner{
   display:grid;
   grid-template-columns: 1.1fr .9fr;
