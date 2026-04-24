@@ -5,8 +5,7 @@
 // 1) Footer year
 document.getElementById('year').textContent = new Date().getFullYear();
 
-// 2) Countdown até sábado às 13:00 (horário de Brasília = UTC-3)
-// Ajusta para o próximo sábado 13:00 automaticamente se já passou.
+// 2) Countdown até 27/04/2026 às 20:15 (horário de Brasília = UTC-3)
 (function countdown() {
   const el = {
     d: document.getElementById('cd-d'),
@@ -16,23 +15,8 @@ document.getElementById('year').textContent = new Date().getFullYear();
   };
   if (!el.d) return;
 
-  // Calcula próximo sábado às 13:00 em Brasília (UTC-3)
-  function nextTarget() {
-    const now = new Date();
-    // converte "agora" para hora de Brasília
-    const brNow = new Date(now.getTime() + (now.getTimezoneOffset() + (-180)) * 60000);
-    const target = new Date(brNow);
-    const day = brNow.getDay(); // 0 dom ... 6 sáb
-    let daysUntilSat = (6 - day + 7) % 7;
-    if (daysUntilSat === 0 && brNow.getHours() >= 13) daysUntilSat = 7;
-    target.setDate(brNow.getDate() + daysUntilSat);
-    target.setHours(13, 0, 0, 0);
-    // converte de volta para o fuso local
-    const localTarget = new Date(target.getTime() - (now.getTimezoneOffset() + (-180)) * 60000);
-    return localTarget;
-  }
-
-  const target = nextTarget();
+  // 27/04/2026 às 20:15 em Brasília (UTC-3) = 23:15 UTC
+  const target = new Date('2026-04-27T23:15:00Z');
 
   function pad(n) { return String(Math.max(0, n)).padStart(2, '0'); }
 
